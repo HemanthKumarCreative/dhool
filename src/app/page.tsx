@@ -62,9 +62,10 @@ const LogoGridPage = () => {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     At Dhool, we transform the fundamental elements of our Earth
                     into extraordinary creations. True to our Sanskrit name
-                    meaning 'dust,' we believe in the infinite potential of raw
-                    materials – whether clay from ancient riverbeds, fibers from
-                    age-old plants, or discarded items awaiting rebirth.
+                    meaning &apos;dust,&apos; we believe in the infinite
+                    potential of raw materials – whether clay from ancient
+                    riverbeds, fibers from age-old plants, or discarded items
+                    awaiting rebirth.
                   </p>
                 </div>
 
@@ -92,10 +93,10 @@ const LogoGridPage = () => {
                     between extraordinary makers and mindful consumers, ensuring
                     that the art and wisdom of craftspeople from remote villages
                     to urban studios reaches homes and hearts – first across our
-                    nation, then worldwide. In doing so, we're not just reducing
-                    our ecological footprint – we're preserving the old world in
-                    all its beauty and charm while ushering in a new dawn of
-                    responsible living.
+                    nation, then worldwide. In doing so, we&apos;re not just
+                    reducing our ecological footprint – we&apos;re preserving
+                    the old world in all its beauty and charm while ushering in
+                    a new dawn of responsible living.
                   </p>
                 </div>
 
@@ -115,9 +116,10 @@ const LogoGridPage = () => {
                     while protecting our Earth?
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Connect with us now. Together, let's build a movement where
-                    every purchase brings joy to your life while supporting both
-                    the maker and the planet – from dust to dawn.
+                    Connect with us now. Together, let&apos;s build a movement
+                    where every purchase brings joy to your life while
+                    supporting both the maker and the planet – from dust to
+                    dawn.
                   </p>
                 </div>
 
@@ -192,9 +194,10 @@ const LogoGridPage = () => {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     At Dhool, we transform the fundamental elements of our Earth
                     into extraordinary creations. True to our Sanskrit name
-                    meaning 'dust,' we believe in the infinite potential of raw
-                    materials – whether clay from ancient riverbeds, fibers from
-                    age-old plants, or discarded items awaiting rebirth.
+                    meaning &apos;dust,&apos; we believe in the infinite
+                    potential of raw materials – whether clay from ancient
+                    riverbeds, fibers from age-old plants, or discarded items
+                    awaiting rebirth.
                   </p>
                 </div>
 
@@ -222,10 +225,10 @@ const LogoGridPage = () => {
                     between extraordinary makers and mindful consumers, ensuring
                     that the art and wisdom of craftspeople from remote villages
                     to urban studios reaches homes and hearts – first across our
-                    nation, then worldwide. In doing so, we're not just reducing
-                    our ecological footprint – we're preserving the old world in
-                    all its beauty and charm while ushering in a new dawn of
-                    responsible living.
+                    nation, then worldwide. In doing so, we&apos;re not just
+                    reducing our ecological footprint – we&apos;re preserving
+                    the old world in all its beauty and charm while ushering in
+                    a new dawn of responsible living.
                   </p>
                 </div>
 
@@ -245,9 +248,10 @@ const LogoGridPage = () => {
                     while protecting our Earth?
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Connect with us now. Together, let's build a movement where
-                    every purchase brings joy to your life while supporting both
-                    the maker and the planet – from dust to dawn.
+                    Connect with us now. Together, let&apos;s build a movement
+                    where every purchase brings joy to your life while
+                    supporting both the maker and the planet – from dust to
+                    dawn.
                   </p>
                 </div>
 
