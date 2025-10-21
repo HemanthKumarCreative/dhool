@@ -54,7 +54,8 @@ const ComingSoonPage = () => {
               <span className="block text-primary">Coming Soon</span>
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              We're crafting something extraordinary. Stay tuned for our launch.
+              We&apos;re crafting something extraordinary. Stay tuned for our
+              launch.
             </p>
           </div>
         </div>
