@@ -83,19 +83,12 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     }
   };
 
-  const handleOverlayClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
+  // Removed handleOverlayClick - outside click no longer closes the form
 
   if (!isOpen) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
-      onClick={handleOverlayClick}
-    >
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
       <div className="relative w-full max-w-md bg-background rounded-2xl shadow-2xl border border-border/50 overflow-hidden">
         {/* Header */}
         <div className="relative px-6 py-4 border-b border-border/50">
