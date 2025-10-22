@@ -111,7 +111,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
           </h2>
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full hover:bg-muted/50 transition-colors duration-200"
+            className="absolute top-4 right-4 p-2 rounded-full hover:bg-muted/50 transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2"
             aria-label="Close form"
           >
             <X className="w-5 h-5 text-muted-foreground" />
@@ -135,7 +135,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
               value={formData.name}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200"
+              className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 cursor-text"
               placeholder="Your full name"
             />
           </div>
@@ -155,7 +155,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
               value={formData.email}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200"
+              className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 cursor-text"
               placeholder="your.email@example.com"
             />
           </div>
@@ -175,7 +175,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
               onChange={handleInputChange}
               required
               rows={4}
-              className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 resize-none"
+              className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 resize-none cursor-text"
               placeholder="Tell us about your inquiry..."
             />
           </div>
@@ -184,7 +184,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
           {submitStatus === "success" && (
             <div className="p-4 rounded-lg bg-green-50 border border-green-200 text-green-800 text-center">
               <p className="font-medium">Message sent successfully!</p>
-              <p className="text-sm">We'll get back to you soon.</p>
+              <p className="text-sm">We&apos;ll get back to you soon.</p>
             </div>
           )}
 
@@ -201,7 +201,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2 active:scale-95"
             style={{
               backgroundColor: "#C06B3F",
               fontFamily: "var(--font-raleway), sans-serif",
@@ -222,6 +222,16 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                 e.currentTarget.style.boxShadow = "none";
               }
             }}
+            onMouseDown={(e) => {
+              if (!isSubmitting) {
+                e.currentTarget.style.transform = "translateY(0) scale(0.98)";
+              }
+            }}
+            onMouseUp={(e) => {
+              if (!isSubmitting) {
+                e.currentTarget.style.transform = "translateY(-1px)";
+              }
+            }}
           >
             {isSubmitting ? (
               <>
@@ -240,7 +250,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
         {/* Footer */}
         <div className="px-6 py-4 border-t border-border/50 bg-muted/20">
           <p className="text-xs text-muted-foreground text-center">
-            We'll respond within 24 hours
+            We&apos;ll respond within 24 hours
           </p>
         </div>
       </div>

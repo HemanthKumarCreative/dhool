@@ -15,23 +15,36 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Dhool - Coming Soon",
+  title: "FROM DUST TO DAWN",
   description:
-    "Something amazing is coming soon. Stay tuned for the launch of our innovative platform that will revolutionize your experience.",
-  keywords: ["coming soon", "launch", "innovation", "platform", "dhool"],
+    "Dhool - A sustainable marketplace celebrating conscious creation through artisanal crafts and eco-friendly products from around the world.",
+  keywords: [
+    "sustainable",
+    "marketplace",
+    "artisanal",
+    "crafts",
+    "eco-friendly",
+    "dhool",
+    "conscious creation",
+  ],
   authors: [{ name: "Dhool Team" }],
+  icons: {
+    icon: "/DhoolLogo.png",
+    shortcut: "/DhoolLogo.png",
+    apple: "/DhoolLogo.png",
+  },
   openGraph: {
-    title: "Dhool - Coming Soon",
+    title: "FROM DUST TO DAWN",
     description:
-      "Something amazing is coming soon. Stay tuned for the launch of our innovative platform.",
+      "Dhool - A sustainable marketplace celebrating conscious creation through artisanal crafts and eco-friendly products from around the world.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dhool - Coming Soon",
+    title: "FROM DUST TO DAWN",
     description:
-      "Something amazing is coming soon. Stay tuned for the launch of our innovative platform.",
+      "Dhool - A sustainable marketplace celebrating conscious creation through artisanal crafts and eco-friendly products from around the world.",
   },
   robots: {
     index: true,
@@ -47,6 +60,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="dhool" />
+      </head>
       <body
         className={`${montserrat.variable} ${raleway.variable} antialiased`}
         style={{ fontFamily: "var(--font-montserrat), Helvetica, sans-serif" }}
