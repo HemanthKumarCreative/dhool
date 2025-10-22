@@ -201,7 +201,7 @@ body {
   animation: fade-in-up 0.8s ease-out forwards;
 }
 
-/* Ultra-Slim Modern Scrollbar - Dhool Brand */
+/* Ultra-Slim Modern Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -209,35 +209,20 @@ body {
 
 ::-webkit-scrollbar-track {
   background: transparent;
-  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    180deg,
-    hsl(var(--primary) / 0.6) 0%,
-    hsl(var(--primary) / 0.8) 50%,
-    hsl(var(--primary) / 0.6) 100%
-  );
+  background: hsl(var(--muted-foreground) / 0.3);
   border-radius: 3px;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
+  transition: all 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    180deg,
-    hsl(var(--primary) / 0.8) 0%,
-    hsl(var(--primary)) 50%,
-    hsl(var(--primary) / 0.8) 100%
-  );
-  width: 8px;
-  transform: scaleX(1.1);
+  background: hsl(var(--primary) / 0.6);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: hsl(var(--primary));
-  transform: scaleX(1.2);
+  background: hsl(var(--primary) / 0.8);
 }
 
 ::-webkit-scrollbar-corner {
@@ -247,7 +232,7 @@ body {
 /* Firefox scrollbar - Ultra-slim */
 * {
   scrollbar-width: thin;
-  scrollbar-color: hsl(var(--primary) / 0.6) transparent;
+  scrollbar-color: hsl(var(--muted-foreground) / 0.3) transparent;
 }
 
 /* Smooth scrolling with momentum */
@@ -263,50 +248,20 @@ html {
 
 .overflow-y-auto::-webkit-scrollbar-track {
   background: transparent;
-  border-radius: 2px;
 }
 
 .overflow-y-auto::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    180deg,
-    hsl(var(--primary) / 0.5) 0%,
-    hsl(var(--primary) / 0.7) 50%,
-    hsl(var(--primary) / 0.5) 100%
-  );
+  background: hsl(var(--muted-foreground) / 0.2);
   border-radius: 2px;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
+  transition: all 0.2s ease;
 }
 
 .overflow-y-auto::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    180deg,
-    hsl(var(--primary) / 0.7) 0%,
-    hsl(var(--primary) / 0.9) 50%,
-    hsl(var(--primary) / 0.7) 100%
-  );
-  width: 6px;
-  transform: scaleX(1.2);
+  background: hsl(var(--primary) / 0.5);
 }
 
-/* Scrollbar animations */
-@keyframes scrollbar-glow {
-  0%, 100% {
-    box-shadow: 
-      0 2px 6px hsl(var(--foreground) / 0.1),
-      0 1px 2px hsl(var(--foreground) / 0.05),
-      inset 0 1px 0 hsl(255 255 255 / 0.1);
-  }
-  50% {
-    box-shadow: 
-      0 4px 12px hsl(var(--foreground) / 0.15),
-      0 2px 4px hsl(var(--foreground) / 0.1),
-      inset 0 1px 0 hsl(255 255 255 / 0.2),
-      0 0 8px hsl(var(--primary) / 0.3);
-  }
-}
 
-/* Auto-hide scrollbar with smooth transitions */
+/* Auto-hide scrollbar (optional) */
 .scrollbar-auto-hide {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -316,42 +271,6 @@ html {
   display: none;
 }
 
-/* Subtle auto-hide behavior for better UX */
-* {
-  scrollbar-gutter: stable;
-}
-
-/* Enhanced scrollbar for better visibility on hover */
-*:hover::-webkit-scrollbar-thumb {
-  opacity: 1;
-}
-
-*::-webkit-scrollbar-thumb {
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-/* Ensure scrollbar doesn't interfere with content */
-body {
-  scrollbar-gutter: stable;
-}
-
-/* Mobile-friendly scrollbar adjustments */
-@media (max-width: 768px) {
-  ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-  
-  .overflow-y-auto::-webkit-scrollbar {
-    width: 3px;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar {
-    width: 4px;
-  }
-}
-
 /* Custom scrollbar for specific containers - Ultra-slim */
 .custom-scrollbar::-webkit-scrollbar {
   width: 5px;
@@ -359,28 +278,16 @@ body {
 
 .custom-scrollbar::-webkit-scrollbar-track {
   background: transparent;
-  border-radius: 2.5px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    180deg,
-    hsl(var(--primary) / 0.6) 0%,
-    hsl(var(--primary) / 0.8) 100%
-  );
+  background: hsl(var(--muted-foreground) / 0.25);
   border-radius: 2.5px;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
+  transition: all 0.2s ease;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    180deg,
-    hsl(var(--primary) / 0.8) 0%,
-    hsl(var(--primary)) 100%
-  );
-  width: 7px;
-  transform: scaleX(1.15);
+  background: hsl(var(--primary) / 0.6);
 }
 
 /* Marquee animations */
