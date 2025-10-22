@@ -1,4 +1,31 @@
+"use client";
+
 import Image from "next/image";
+
+const handleContactClick = () => {
+  const email = "getpersonal@veeville.com";
+  const subject = "Contact from Dhool Website";
+  const body = "Hello, I would like to get in touch regarding Dhool.";
+
+  // Try to open mailto link
+  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+
+  try {
+    window.location.href = mailtoLink;
+  } catch (error) {
+    console.error("Failed to open email client:", error);
+    // Fallback: copy email to clipboard
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(email).then(() => {
+        alert(`Email copied to clipboard: ${email}`);
+      });
+    } else {
+      alert(`Please contact us at: ${email}`);
+    }
+  }
+};
 
 const LogoGridPage = () => {
   const logos = [
@@ -11,6 +38,29 @@ const LogoGridPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <div className="w-full px-4 sm:px-6 lg:px-8 py-4 lg:py-8">
+        {/* Contact Button - Mobile */}
+        <div className="lg:hidden flex justify-end mb-4">
+          <button
+            onClick={handleContactClick}
+            className="inline-flex items-center px-3 py-2 text-xs font-medium text-primary bg-primary/10 hover:bg-primary/20 border border-primary/20 hover:border-primary/30 rounded-full transition-all duration-200 cursor-pointer"
+          >
+            <svg
+              className="w-3 h-3 mr-1.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+            Contact
+          </button>
+        </div>
         {/* Mobile/Tablet Layout - Stacked */}
         <div className="block lg:hidden space-y-8">
           {/* Image Grid - Top */}
@@ -39,11 +89,14 @@ const LogoGridPage = () => {
               {/* Left Column */}
               <div className="space-y-4">
                 {/* Main Heading */}
-                <div className="space-y-2">
-                  <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
-                    Dhool
+                <div>
+                  <h1
+                    className="text-3xl sm:text-4xl font-bold text-foreground leading-tight"
+                    style={{ fontFamily: "var(--font-raleway), sans-serif" }}
+                  >
+                    dhool
                   </h1>
-                  <p className="text-base sm:text-lg text-primary font-medium tracking-wide">
+                  <p className="text-sm sm:text-lg text-muted-foreground font-medium tracking-wide -mt-2">
                     From Dust to Dawn
                   </p>
                 </div>
@@ -127,14 +180,18 @@ const LogoGridPage = () => {
                 <div className="pt-4 border-t border-border">
                   <p className="text-xs text-muted-foreground font-medium">
                     A{" "}
-                    <span
+                    <a
+                      href="https://veeville.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:no-underline transition-all duration-200 cursor-pointer"
                       style={{
                         fontFamily: "Georgia, serif",
                         fontStyle: "italic",
                       }}
                     >
                       Veeville.
-                    </span>{" "}
+                    </a>{" "}
                     Company
                   </p>
                 </div>
@@ -143,8 +200,32 @@ const LogoGridPage = () => {
           </div>
         </div>
 
+        {/* Contact Button - Desktop */}
+        <div className="hidden lg:flex justify-end mb-6">
+          <button
+            onClick={handleContactClick}
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-primary bg-primary/10 hover:bg-primary/20 border border-primary/20 hover:border-primary/30 rounded-full transition-all duration-200 cursor-pointer"
+          >
+            <svg
+              className="w-4 h-4 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+            Contact
+          </button>
+        </div>
+
         {/* Desktop Layout - Side by Side */}
-        <div className="hidden lg:grid lg:grid-cols-[40%_60%] gap-6 h-[calc(100vh-4rem)] items-center">
+        <div className="hidden lg:grid lg:grid-cols-[40%_60%] gap-6 h-[calc(100vh-8.5rem)] items-center">
           {/* Image Grid */}
           <div className="flex justify-center">
             <div className="grid grid-cols-2 gap-4 w-full max-w-xl">
@@ -171,12 +252,15 @@ const LogoGridPage = () => {
               {/* Left Column */}
               <div className="space-y-4 lg:space-y-6">
                 {/* Main Heading */}
-                <div className="space-y-2">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-                    Dhool
+                <div>
+                  <h1
+                    className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight"
+                    style={{ fontFamily: "var(--font-raleway), sans-serif" }}
+                  >
+                    dhool
                   </h1>
-                  <p className="text-base sm:text-lg lg:text-xl text-primary font-medium tracking-wide">
-                    From Dust to Dawn
+                  <p className="text-sm text-muted-foreground font-medium tracking-wide -mt-2">
+                    FROM DUST TO DAWN
                   </p>
                 </div>
 
@@ -259,14 +343,18 @@ const LogoGridPage = () => {
                 <div className="pt-4 border-t border-border">
                   <p className="text-xs text-muted-foreground font-medium">
                     A{" "}
-                    <span
+                    <a
+                      href="https://veeville.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:no-underline transition-all duration-200 cursor-pointer"
                       style={{
                         fontFamily: "Georgia, serif",
                         fontStyle: "italic",
                       }}
                     >
-                      Veeville.
-                    </span>{" "}
+                      <strong>Veeville.</strong>
+                    </a>{" "}
                     Company
                   </p>
                 </div>
