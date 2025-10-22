@@ -1,34 +1,17 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
-
-const handleContactClick = () => {
-  const email = "getpersonal@veeville.com";
-  const subject = "Contact from Dhool Website";
-  const body = "Hello, I would like to get in touch regarding Dhool.";
-
-  // Try to open mailto link
-  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
-    subject
-  )}&body=${encodeURIComponent(body)}`;
-
-  try {
-    window.location.href = mailtoLink;
-  } catch (error) {
-    console.error("Failed to open email client:", error);
-    // Fallback: copy email to clipboard
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(email).then(() => {
-        alert(`Email copied to clipboard: ${email}`);
-      });
-    } else {
-      alert(`Please contact us at: ${email}`);
-    }
-  }
-};
+import ContactForm from "@/components/ContactForm";
 
 const LogoGridPage = () => {
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+
+  const handleContactClick = () => {
+    setIsContactFormOpen(true);
+  };
+
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <div className="w-full px-4 sm:px-6 lg:px-8 py-4 lg:py-8">
@@ -166,7 +149,7 @@ const LogoGridPage = () => {
         {/* Image Carousel - Responsive */}
         <div className="w-screen mb-6 sm:mb-8 -ml-4 sm:-ml-6 lg:-ml-8 -mr-4 sm:-mr-6 lg:-mr-8">
           <Marquee
-            className="[--duration:30s] [--gap:0] !p-0"
+            className="[--duration:30s] [--gap:0] p-0!"
             pauseOnHover={true}
             repeat={3}
           >
@@ -347,6 +330,12 @@ const LogoGridPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Contact Form Modal */}
+      <ContactForm
+        isOpen={isContactFormOpen}
+        onClose={() => setIsContactFormOpen(false)}
+      />
     </div>
   );
 };
