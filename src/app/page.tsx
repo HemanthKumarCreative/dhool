@@ -76,14 +76,25 @@ const LogoGridPage = () => {
             <div className="w-fit">
               <div className="flex items-center justify-end">
                 <h1
-                  className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-foreground leading-tight"
-                  style={{ fontFamily: "var(--font-raleway), sans-serif" }}
+                  className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold leading-tight"
+                  style={{
+                    fontFamily: "var(--font-raleway), sans-serif",
+                    color: "#C06B3F",
+                    letterSpacing: "0.05em",
+                  }}
                 >
                   dhool
                 </h1>
               </div>
-              <p className="text-sm md:text-base lg:text-lg text-muted-foreground font-medium tracking-wide -mt-2 pl-8">
-                - FROM DUST TO DAWN
+              <p
+                className="text-sm md:text-base lg:text-lg font-medium -mt-2 pl-8"
+                style={{
+                  color: "#C06B3F",
+                  letterSpacing: "0.15em",
+                  fontFamily: "sans-serif",
+                }}
+              >
+                FROM DUST TO DAWN
               </p>
             </div>
           </div>
