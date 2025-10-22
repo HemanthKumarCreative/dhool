@@ -33,7 +33,7 @@ const LogoGridPage = () => {
     <div className="min-h-screen bg-background overflow-x-hidden">
       <div className="w-full px-4 sm:px-6 lg:px-8 py-4 lg:py-8">
         {/* Main Heading */}
-        <div className="flex justify-between">
+        <div className="flex justify-between mb-[2rem]">
           <div className="flex justify-between items-center mb-4 md:mb-6 w-52">
             <Image
               src="/DhoolLogo.png"
@@ -74,9 +74,9 @@ const LogoGridPage = () => {
               Contact
             </button>
             <div className="w-fit">
-              <div className="flex items-center justify-end">
+              <div className="flex items-center justify-center">
                 <h1
-                  className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold leading-tight"
+                  className="text-6xl sm:text-7xl md:text-8xl xl:text-9xl font-semibold leading-tight"
                   style={{
                     fontFamily: "var(--font-raleway), sans-serif",
                     color: "#C06B3F",
@@ -87,7 +87,7 @@ const LogoGridPage = () => {
                 </h1>
               </div>
               <p
-                className="text-sm md:text-base lg:text-lg font-medium -mt-2 pl-8"
+                className="text-sm md:text-base lg:text-lg font-medium -mt-6 text-center"
                 style={{
                   color: "#C06B3F",
                   letterSpacing: "0.15em",
