@@ -76,18 +76,18 @@ const LogoGridPage = () => {
             <div className="w-fit">
               <div className="flex items-center justify-center">
                 <h1
-                  className="text-6xl sm:text-7xl md:text-8xl xl:text-9xl font-semibold leading-tight"
+                  className="text-6xl sm:text-7xl md:text-8xl xl:text-8xl font-semibold leading-tight"
                   style={{
                     fontFamily: "var(--font-raleway), sans-serif",
                     color: "#C06B3F",
-                    letterSpacing: "0.05em",
+                    letterSpacing: "0.15em",
                   }}
                 >
                   dhool
                 </h1>
               </div>
               <p
-                className="text-sm md:text-base lg:text-lg font-medium -mt-6 text-center"
+                className="text-sm md:text-base lg:text-lg font-medium -mt-5 text-center"
                 style={{
                   color: "#C06B3F",
                   letterSpacing: "0.15em",
@@ -274,9 +274,10 @@ const LogoGridPage = () => {
                 style={{
                   fontFamily: "Georgia, serif",
                   fontStyle: "italic",
+                  fontSize: "1.1rem",
                 }}
               >
-                <strong>Veeville.</strong>
+                Veeville.
               </a>{" "}
               Company
             </p>
