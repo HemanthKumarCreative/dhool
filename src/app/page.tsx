@@ -13,7 +13,10 @@ const LogoGridPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div
+      id="main-content"
+      className="min-h-screen bg-background overflow-x-hidden"
+    >
       <div className="w-full px-4 sm:px-6 lg:px-8 py-4 lg:py-8">
         {/* Main Heading - Responsive Layout */}
         <div className="relative mb-6 lg:mb-8">
@@ -304,6 +307,30 @@ const LogoGridPage = () => {
                   where every purchase brings joy to your life while supporting
                   both the maker and the planet – from dust to dawn.
                 </p>
+              </div>
+
+              {/* Connect Button */}
+              <div className="pt-4">
+                <button
+                  onClick={handleContactClick}
+                  className="inline-flex items-center px-4 py-2.5 text-sm font-medium text-primary bg-primary/10 hover:bg-primary/20 border border-primary/20 hover:border-primary/30 rounded-full transition-all duration-200 cursor-pointer"
+                >
+                  <svg
+                    className="w-4 h-4 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Connect
+                </button>
               </div>
             </div>
           </div>
