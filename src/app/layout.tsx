@@ -183,7 +183,7 @@ export default function RootLayout({
         },
         sameAs: [
           "https://veeville.com/",
-          "https://www.linkedin.com/company/dhool",
+          "https://www.linkedin.com/company/dhool-from-dust-to-dawn/?viewAsMember=true",
         ],
         contactPoint: {
           "@type": "ContactPoint",
@@ -254,12 +254,15 @@ export default function RootLayout({
           "https://www.dhool.org/images/2-02.jpg",
           "https://www.dhool.org/images/2-03.jpg",
         ],
-        telephone: "+91-XXXXXXXXXX",
-        email: "contact@dhool.org",
+        email: "dhool@veeville.com",
         address: {
           "@type": "PostalAddress",
+          streetAddress:
+            "300, 3rd Floor, 3rd Main Rd, opposite BDA Complex, 1st Block, Matadahalli, Extn, RT Nagar",
+          addressLocality: "Bengaluru",
+          addressRegion: "Karnataka",
+          postalCode: "560032",
           addressCountry: "IN",
-          addressLocality: "India",
         },
         openingHoursSpecification: {
           "@type": "OpeningHoursSpecification",
